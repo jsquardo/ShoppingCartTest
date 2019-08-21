@@ -31,6 +31,9 @@
 <script>
 export default {
   name: 'ProductList',
+  created() {
+    this.$store.dispatch('getProductItems');
+  }
 }
 </script>
 
