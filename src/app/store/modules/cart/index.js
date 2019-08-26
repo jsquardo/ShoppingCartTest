@@ -19,7 +19,7 @@ const mutations = {
 const actions = {
 	getCartItems({ commit }) {
 		axios.get('/api/cart').then((response) => {
-			commit('UPDATED_CART_ITEMS', response.data);
+			commit('UPDATE_CART_ITEMS', response.data);
 		});
 	},
 	addCartItem({ commit }, cartItem) {
@@ -33,7 +33,7 @@ const actions = {
 		});
 	},
 	removeAllCartItems({ commit }) {
-		axios.post('/api/cart.delete/all').then((response) => {
+		axios.post('/api/cart/delete/all').then((response) => {
 			commit('UPDATE_CART_ITEMS', response.data);
 		});
 	}
